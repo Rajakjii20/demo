@@ -1,0 +1,5 @@
+SELECT min(cast(SQRT(power(P2.x - P1.x, 2) + power(P2.y - P1.y, 2)) AS DECIMAL(10, 2))) AS shortest
+FROM point_2d AS P1
+INNER JOIN point_2d AS P2 ON NOT (
+        P1.x = P2.x
+        AND P1.y = P2.y)    

@@ -1,0 +1,3 @@
+SELECT P.Name, A.Address
+FROM Person P
+JOIN Address A ON P.PersonID = A.PersonID;
